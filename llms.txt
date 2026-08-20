@@ -1,0 +1,27 @@
+# ComfyUI on RunPod: field notes
+
+> Operational knowledge for ComfyUI video/image generation (LTX-2.3,
+> LTX-2.5, FLUX.1/2, Wan 2.2) on RunPod GPU pods with network volumes:
+> a symptom-indexed pitfall catalog, validated recipes, and small
+> dependency-free scripts.
+
+## Docs
+
+- [README](README.md): architecture pattern, recipes, script index
+- [PITFALLS](PITFALLS.md): 20 symptom-indexed failure modes with fixes —
+  black-frames-with-success-status, silent text-encoder weight-mismatch,
+  UI-to-API widget misfill (batch_size), CFG-1 negative prompts inert,
+  bundled-model shadowing, dynamic-VRAM truncation, RunPod GraphQL and
+  S3 API quirks
+- [SKILL](SKILL.md): the same knowledge as an installable agent skill
+
+## Scripts (Python stdlib only)
+
+- [check-output.py](scripts/check-output.py): content gate for outputs
+  (PASS / BLACK / BAD)
+- [runpod-volume-s3.py](scripts/runpod-volume-s3.py): manage a RunPod
+  network volume via its S3-compatible API, no pod required
+- [ui2api.py](scripts/ui2api.py): ComfyUI UI-graph to API-prompt
+  converter with widget lint
+- [patch-ltxvideo-pad-shim.py](scripts/patch-ltxvideo-pad-shim.py):
+  fix ComfyUI-LTXVideo's kornia pad import
