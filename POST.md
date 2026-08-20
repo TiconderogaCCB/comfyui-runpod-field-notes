@@ -36,7 +36,7 @@ letterboxing), and four small dependency-free scripts, including the
 content gate that makes "success with black frames" hard to miss
 again:
 
-**[LINK TO REPO]**
+**https://github.com/TiconderogaCCB/comfyui-runpod-field-notes**
 
 Context: this all came out of building the generation pipeline for a
 family-history documentary short set in 1860s Texas, which is why every
